@@ -1,0 +1,225 @@
+  <!DOCTYPE html>
+<html>
+
+  <head>
+
+  <script >
+    function findD(){
+      var s11=document.getElementById('s11').value;
+      var s12=document.getElementById('s12').value;
+      var s13=document.getElementById('s13').value;
+      var s21=document.getElementById('s21').value;
+      var s22=document.getElementById('s22').value;
+      var s23=document.getElementById('s23').value;
+      var s31=document.getElementById('s31').value;
+      var s32=document.getElementById('s32').value;
+      var s33=document.getElementById('s33').value;
+
+      
+    var x =s11*s22*s33+s12*s23*s31+s13*s21*s32-s13*s22*s31-s11*s23*s32-s12*s21*s33;
+  document.getElementById("result").innerHTML = x;
+  document.getElementById("formula").innerHTML ="|A| = "+document.getElementById('s11').value +'*'+document.getElementById('s22').value+"*"+document.getElementById('s33').value+' + '+document.getElementById('s12').value+'*'+document.getElementById('s23').value+'*'+document.getElementById('s31').value+' + '+document.getElementById('s13').value+'*'+document.getElementById('s21').value+'*'+document.getElementById('s32').value+' - '+document.getElementById('s13').value+'*'+document.getElementById('s22').value+'*'+document.getElementById('s31').value+' - '+document.getElementById('s11').value+'*'+document.getElementById('s23').value+'*'+document.getElementById('s32').value+' - '+document.getElementById('s12').value+'*'+document.getElementById('s21').value+'*'+document.getElementById('s33').value+" = "+ x;
+  document.getElementById("def").innerHTML="Definition:";
+  document.getElementById("info").innerHTML="The rule of Sarrus is a mnemonic for the 3 × 3 matrix determinant: the sum of the products of three diagonal north-west to south-east lines of matrix elements, minus the sum of the products of three diagonal south-west to north-east lines of elements, when the copies of the first two columns of the matrix are written beside it as in the illustration. This scheme for calculating the determinant of a 3 × 3 matrix does not carry over into higher dimensions.";                                                                                                                                          
+
+  }
+  
+  </script>
+   <style>
+    body{
+
+    
+    }
+
+    #back{
+      border:1px solid white;
+      background-color: white;
+      height: 330px;
+      width:330px;
+      margin-left:25px;
+      box-shadow: 1px 10px 30px 8px #888888;
+      margin-top: 25px;
+      
+
+
+    }
+    #matrix{
+      margin-top:15px;
+      margin-left:27px; 
+      display:flex;
+      height: 300px;
+      width:300px;
+      flex-wrap:wrap;
+      
+    }
+
+  #matrix input{
+    border:1px solid black;
+    width:80px;
+    padding:5px;
+    font-size:35px;
+    text-align: center;
+
+}
+#result{
+  font-size:35px;
+  color:red;
+  position: absolute;
+  top:45px;
+  left:30px;
+}
+#calc{
+  font-size: 30px;
+  margin-left:25px;
+  margin-top: 0px; 
+  color:gray;  
+}
+
+#task1{
+  font-size: 12px;
+  color:gray;
+  margin-left:25px;
+  margin-bottom: 0px;
+  
+}
+
+#rside{
+  border-collapse: collapse;
+  border:1px solid white;
+  height: 400px;
+  width: 700px;
+  position: absolute;
+  top:90px;
+  left:400px;
+  background-color: white;
+  
+
+}
+
+#res{
+  border:1px solid black;
+  width: 50px;
+  border-radius: 5px;
+  padding-right:4px;
+  padding-left: 2px;  
+  color:white;
+  background-color: black;
+  position: absolute;
+  left:20px;
+  top:20px;
+
+}
+
+#formula{
+  position: absolute;
+  top:90px;
+  left:30px;
+  color:gray;
+}
+#def{
+  position: absolute;
+  top:120px;
+  left:30px;
+}
+#info{
+  position: absolute;
+  left:30px;
+  top:140px;
+}
+#determinant{
+  font-size:20px;
+  margin-top: 10px;
+  margin-left:25px;
+  font-family:Courier, Monaco, monospace ;
+  border:1px solid white;
+  }
+
+  button{
+    border:1px solid white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 70px;
+    padding-left: 10px;
+    background-color: white;
+    cursor: pointer;
+    position: absolute;
+  }
+  #lside{
+    position: absolute;
+    width:3px;
+    height:43.5px;
+    background-color: red;
+    top:0px;
+    left: -2px;
+  }
+  #arrow{
+    position: absolute;
+    width:20px;
+    height: 1.5px;
+    right:10px;
+    top:20px;
+    padding-left: 5px;
+    background-color: #BFBFBF;
+  }
+  #arrow::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 1px;
+  top: -5px;
+  right: -1px;
+  background-color: #BFBFBF;
+  border-radius: 5px;
+  transform: rotate(45deg);
+}
+ #arrow::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 1px;
+  top: 6px;
+  right: -1px;
+  background-color: #BFBFBF;
+  border-radius: 5px;
+  transform: rotate(-45deg);
+}
+</style>
+  </head>
+
+  <body>
+    <p id="task1">Task-1</p>
+    <p id="calc">Calculate the determinant of given matrix:</p>
+    <div id="back">
+    <div id="matrix">
+      <input type="text" id="s11" placeholder="s11" />
+      <input type="text" id="s12" placeholder="s12"/>
+      <input type="text" id="s13" placeholder="s13"/>
+      <input type="text" id="s21" placeholder="s21"/>
+      <input type="text" id="s22" placeholder="s22"/>
+      <input type="text" id="s23" placeholder="s23"/>
+      <input type="text" id="s31" placeholder="s31"/>
+      <input type="text" id="s32" placeholder="s32"/>
+      <input type="text" id="s33" placeholder="s33"/>
+    </div>
+  </div>
+    <br>
+    <button id="determinant" onclick="findD()">FIND DETERMINANT
+      <div id="lside"></div>
+      <div id="arrow"></div>
+    </button>
+    
+    
+    
+    <div id="rside">
+      <div id="res">Result:</div>
+      <div id="result"></div>
+      <div id="def"></div>
+      <div id="info"></div>
+      <div id="formula"></div>
+    </div>
+    
+    
+    
+  </body>
+
+</html>

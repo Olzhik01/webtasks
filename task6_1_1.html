@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script >
+
+	
+</script>
+<style>
+	body{
+		margin:0;
+
+	}
+	
+	#navbar{
+		position: absolute;
+		box-shadow: 0px 1px 8px 2px #888888;
+		border:1px solid white;
+		width:100%;
+		height: 70px;
+		z-index: 4;
+			 
+
+	}
+	#logo{
+		position: absolute;
+		top:10px;
+		left:20px;
+		width: 180px;
+		height: 50px;
+		cursor:pointer;
+	}		
+
+	#search{
+		position: absolute;
+		top:18px;
+		right:210px;
+		width:350px;
+		height: 25px;
+		border:1px solid gray;
+		font-size: 15px;
+		cursor: text;
+		
+
+	}
+	#myphoto{
+		border-radius:50%;
+		width:50px;
+		height: 40px;
+		position: absolute;
+		right:20px;
+		top:15px; 
+		cursor: pointer;
+	}
+	#bells{
+		position: absolute;
+		top:11px;
+		right:15px;
+		border:1px solid white;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+	}
+	#frame{
+		position: absolute;
+	
+		right:100px;
+		border-right:1px solid gray;
+		border-left:1px solid gray;
+		width:70px; 
+		height: 70px;
+	}
+
+	.lside{
+		position: absolute;
+		top:72px;
+		border-right: 1px solid gray;
+		width: 120px;
+		height: 100%;
+	}
+	.lside a{
+		position: absolute;
+		top:124px;
+		left:52px;
+		text-decoration: none;
+		color:#8954BA;
+
+	}
+
+	.lside a:hover{
+		border-right:3px solid #8954BA;
+
+
+	}
+
+	.lside a.active{
+		border-right: 3px solid #8954BA;
+
+		
+	}
+
+	.topside{
+		position: absolute;
+		left:120px;
+		border-bottom:1px solid black;
+		width: 1796.5px;
+		
+
+	}
+	.topside li{
+		margin-top:120px;
+		float: left;
+		font-size: 15px;
+		font-family: AktivGrotesk-Regular;
+
+
+	}
+	.topside ul{
+		list-style-type: none;
+		
+	}
+	.topside a{
+		display: block;
+		text-decoration: none;
+		margin-left:30px;
+		margin-right: 100px;
+		padding-right: 20px;
+		padding-left:20px;
+		padding-bottom: 5px;
+		color:black;
+		border-bottom: 3px solid transparent;
+	}
+	.topside a:hover{
+		border-bottom:3px solid #8954BA;
+		color:#8954BA;
+
+	}
+	.topside a.active{
+		border-bottom:3px solid #8954BA;
+		color:#8954BA;
+	}
+	
+	#back{
+		position: absolute;
+		top:70px;
+		left:80px;
+		color:gray;
+		font-size: 13px;
+		font-family: AktivGrotesk-Regular;
+	}
+
+	#pathway{
+		position: absolute;
+		top:70px;
+		left:130px;
+		color:gray;
+		cursor: pointer;
+		font-size: 13px;
+		font-family: AktivGrotesk-Regular;
+
+	}
+	#arrowland{
+		position: absolute;
+		top:62px;
+		left:70px;
+		cursor: pointer;
+
+	}
+	#arrow{
+    position: absolute;
+    width:10px;
+    height: 1px;
+    right:0px;
+    top:15px;
+    padding-left: 5px;
+    background-color: gray;
+
+  	}
+  	 #arrow::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 1px;
+  top: -1.5px;
+  right: 7px;
+  background-color: gray;
+  border-radius: 5px;
+  transform: rotate(-45deg);
+}
+ #arrow::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 1px;
+  top: 1.5px;
+  right: 7px;
+  background-color: gray;
+  border-radius: 5px;
+  transform: rotate(45deg);
+}
+ 	
+ 	#triangle_left{
+ 		border-top: 5px solid transparent;
+		border-right: 15px solid black;
+		border-bottom: 5px solid transparent;
+
+ 	}
+
+ 	span{
+ 		color:black;
+ 	}
+
+ 	#dashboard{
+ 		position: absolute;
+ 		top:185px;
+ 		left:180px;
+ 		font-size: 18px;
+ 		font-family:AktivGrotesk-Bold;
+ 	}
+ 	
+
+ 	.table{
+ 		position: relative;
+ 		top:260px;
+ 		left:175px;
+ 		max-width:1200px;
+ 		width:100%;
+ 		border-collapse: collapse;
+ 		border:1px solid white;
+ 		text-align: left;
+ 		font-size: 14px;
+ 		font-family: AktivGrotesk-Regular;
+ 	}
+
+ 	
+
+ 	.table td{
+ 		border-collapse: collapse;
+ 		border-bottom: 1px solid black;
+ 		padding-bottom:19px;
+ 		padding-left: 10px;
+ 		
+ 			
+ 		
+ 	}
+
+ 	.table thead{
+ 		font-size: 13px;
+ 		font-family: "AktivGrotesk-Bold";
+ 	}
+
+ 
+ 	
+ 		
+
+ 	
+ 	#add_user{
+ 		position: absolute;
+ 		top:200px;
+ 		right:55px;
+ 		height:42px;
+ 		width:140px;
+ 		border:1px solid #5D38DB;
+ 		background-color: #5D38DB;
+ 		color:white;
+ 		cursor: pointer;
+ 		font-size: 15px;
+ 		font-family: AktivGrotesk-Bold;
+
+ 	}
+ 	#addusericon{
+ 		color:white;
+ 		margin-right: 10px;
+ 	}
+ 	#newuser{
+ 		border:1px solid black;
+ 	}
+ 	.modal {
+  		display: none;
+  		position: fixed; 
+  		z-index: 1; 
+  		left:0;
+  		top: 70px;
+  		width: 100%; 
+  		height: 100%; 
+  		overflow: auto; 
+  		background-color: rgb(0,0,0); /* Fallback color */
+  		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+	.modal-content {
+  		background-color: white;
+  		padding: 20px;
+  		border: 1px solid #888;
+  		position: absolute;
+  		right:0px;
+  		width: 600px;
+  		height:700px;
+
+	}
+
+
+	#sen1{
+		position: absolute;
+		top:100px;
+		left:50px;
+		font-size: 20px;
+		font-family: AktivGrotesk-Bold;
+	}
+#sen2{
+	position: absolute;
+	top:130px;
+	left:50px;
+	font-size: 14px;
+	font-family: AktivGrotesk-Regular;
+	color:gray;
+}
+
+#register{
+	cursor: pointer;
+}
+#name{
+	position: absolute;
+	top:200px;
+	left:50px;
+	border:none;
+	border-bottom: 1px solid black;
+	width:500px;
+}
+
+#email{
+	position: absolute;
+	top:270px;
+	left:50px;
+	border:none;
+	border-bottom: 1px solid black;
+	width:500px;
+}
+
+#phone{
+	position: absolute;
+	top:340px;
+	left:50px;
+	border:none;
+	border-bottom: 1px solid black;
+	width:500px;
+}
+
+#mode{
+	position: absolute;
+	top:480px;
+	left:50px;
+	border:none;
+	border-bottom: 1px solid black;
+	width:500px;
+
+}
+
+.account{
+	position: absolute;
+	top:410px;
+	left:50px;
+	border:none;
+	border-bottom: 1px solid black;
+	width:500px;
+}
+.account option{
+	font-size:18px; 
+	font-family: AktivGrotesk-Bold;
+}
+
+option:hover{
+	color:red;
+
+
+}
+
+
+#disabled{
+	display: none;
+	
+}
+#accounttype{
+	font-size: 12px;
+	font-family: AktivGrotesk-Regular;
+}
+
+#setactive{
+	position: absolute;
+	top:560px;
+	left:50px;
+	font-size: 13px;
+	font-family: AktivGrotesk-Regular;
+}
+#save{
+	position: absolute;
+ 	top:560px;
+ 	right:55px;
+ 	height:42px;
+ 	width:236px;
+ 	background-color: blue;
+ 	border:1px solid blue;
+ 	color:white;
+ 	text-align:center;
+ 	font-size: 12px;
+ 	font-family: AktivGrotesk-Bold;
+
+}
+
+#moreinfo{
+	color:gray;
+	font-size: 15px;
+
+}
+#moreinfo:hover{
+	color:violet;
+}
+.placeicon{
+	font-family: fontawesome;
+
+}
+
+#numofusers{
+	position: absolute;
+	bottom:0px;
+	left:160px;
+	font-size: 12px;
+}
+
+input[type=checkbox] + label{
+ 	display: block;
+ }
+ input[type=checkbox]{
+ 	display: none;
+ }
+
+ input[type=checkbox] + label::before {
+  content: "\2714";
+  vertical-align: bottom;
+  border: 1px solid black;
+  border-radius: 4px;
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  position: relative;
+  padding-bottom: 20px;
+  color: transparent;
+  margin-right:10px;
+  padding-left:2px;
+  font-size:12px;
+
+  
+}
+
+input[type=checkbox]:checked + label::before {
+  background-color: white;
+  border-color: violet;
+  color: violet;
+  border:2px solid violet;
+
+
+}
+
+input[type=submit]{
+	cursor:pointer;
+}
+
+.myModal1 input[type=text]::placeholder{
+	font-size: 13px;
+	font-family: AktivGrotesk-Regular;
+	position: relative;
+	bottom:8px;
+}
+
+	#confirmBox{
+  		display: none;
+  		position: fixed; 
+  		z-index: 9999; 
+  		top:0;
+  		left:0;
+  		width: 100%; 
+  		height: 100%; 
+  		overflow: auto; 
+  		background-color: rgb(0,0,0); /* Fallback color */
+  		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	}
+
+
+	#confirmBoxContent {
+  		background-color: white;
+  		padding: 20px;
+  		border: 1px solid #888;
+  		position: absolute;
+  		left:450px;
+  		top:200px;
+  		max-width: 600px;
+  		width: 100%;
+  		max-height: 300px;
+  		height:100%;
+
+	}
+
+	#sen3{
+		font-size: 23px;
+		font-family: AvenirNext-Bold;
+		position: absolute;
+		left:180px;
+		top:100px;
+		
+	}
+
+	#deleteBox{
+		position: absolute;
+		left:130px;
+		top:200px;
+		width:149.34px;
+		height:31.05px;
+		background-color: #5D38DB;
+		border:1px solid #5D38DB;
+		color:white;
+		cursor: pointer;
+
+	}
+
+	#cancelBox{
+		position: absolute;
+		right:130px;
+		top:200px;
+		width:149.34px;
+		height:31.05px;
+		background-color: white;
+		border:1px solid black;
+		cursor: pointer;
+
+	}
+
+}
+</style>
+</head>
+<body>
+<div id="navbar">
+	<img id="logo" src="yourlogo.png" alt="your logo">
+	<div>
+		<input id="search" type="text" class="placeicon" placeholder="&#xf002;Search e.g. live instagram channel">
+	</div>
+	<img  id="myphoto" src="myphoto.jpg" alt="myphoto">
+	<div id="frame">
+	<img id="bells" src="bells.jpg">
+	</div>
+</div>
+
+
+
+<div class="lside"><a href="#home" class="fa fa-home active" style="font-size: 70px;"></a></div>
+<div class="topside">
+	<div id="arrowland">
+	<p id="arrow"></p>
+	</div>
+	<p id="back">Back</p>
+	<p id="pathway">Home/Admin/<span>User Managements</span></p>
+<ul>
+  	<li><a class="active" href="#home">Users</a></li>
+  	<li><a href="#news">Reports</a></li>
+  	<li><a href="#contact">Requests</a></li>
+  	<li><a href="#about">Disabled Users</a></li>
+  	<li><a href="#about"><i id="moreinfo" class="fa fa-ellipsis-h"></i></a></li>
+  	
+</ul>
+</div>
+
+
+
+
+<div class="main">
+	<p id="dashboard">Dashboard Users</p>
+	<button id="add_user" onclick="add()"><i id="addusericon" class="fa fa-user-plus"></i>Add User</button>
+
+
+	<table id="table1" class="table">
+		<thead>
+			<tr>
+				<td>
+					
+  					<input type="checkbox" id="fruit1" name="fruit-1" value="Apple">
+  					<label for="fruit1">Account Status</label>
+  				</td>
+  			
+				
+				<td>User Name</td>
+				<td>Email</td>
+				<td>Account type</td>
+				<td>Phone</td>
+				<td>Mode</td>
+				<td>Actions</td>
+			</tr>
+		</thead>
+			<tbody>
+				
+			</tbody>
+				
+				
+			
+			<p id="numofusers"></p>
+	</table>
+	
+
+
+	<div id="myModal" class="modal">
+  		<div id="modalcontent" class="modal-content">
+  			<p id="sen1">Add new user:</p>
+  			<p id="sen2">Write name,email,phone and choose your account type</p>
+
+  			<form class="myModal1" onsubmit="event.preventDefault();onFormSubmit()" >
+  				
+  					<div>
+  					<input id="name" type="text" placeholder="Name" >
+  					</div>
+
+  					<div>	
+  					<input id="email" type="text" placeholder="Email">
+  					</div>
+
+  					<div>
+  					<input id="phone" type="text" placeholder="Phone">
+  					</div>
+
+
+  					<div>
+  					<select class="account" id="accounttype">
+  						<option id="disabled">Account Type</option>
+  						<option id="admin">Admin</option>
+  						<option>Master Admin</option>
+  						<option>User</option>
+  						<option>Semi Admin</option>
+  					</select>
+  					</div>
+  					
+  					<div>
+  					<input id="mode" type="text" placeholder="Mode">
+  					</div>
+
+  					<div id="setactive">
+  						<input id="checkbox1" type="checkbox" onclick="a()">
+  						<label for="checkbox1">Set Active</label>
+  					</div>
+  		
+  					<div>
+  					<input id="save" type="submit" value="Add new user">
+  					</div>
+
+  				
+  		</form>
+  	
+	  		
+  		</div>
+	</div>
+
+	<div id="confirmBox">
+		<div id="confirmBoxContent">
+			<p id="sen3">Are you sure, want to delete?</p>
+			<button id="deleteBox" onclick="">Delete</button>
+			<button id="cancelBox" onclick="onCancel()">Cancel</button>
+			
+		</div>
+	</div>
+</div>
+
+
+<script>
+var cBox=document.getElementById("confirmBox");
+var selectedRow = null;
+
+
+ 
+function onFormSubmit() {
+        var formData = readFormData();
+        if (selectedRow == null){
+            insertNewRecord(formData);
+            modal.style.display="none";
+            
+        }
+
+        else{
+            updateRecord(formData);
+            modal.style.display="none";
+        }
+        document.getElementById("save").value="Add new user";
+   		document.getElementById("sen1").innerHTML="Add new user:";
+    	document.getElementById("sen2").innerHTML="Write name,email,phone and choose your account type";
+
+	    resetForm();        
+    }
+
+
+function readFormData() {
+    var formData = {};
+    
+    formData["name"] = document.getElementById("name").value;
+    formData["email"] = document.getElementById("email").value;
+    formData["phone"] = document.getElementById("phone").value;
+    formData["mode"] = document.getElementById("mode").value;
+    return formData;
+}
+
+
+
+function insertNewRecord(data) {
+	
+
+	var table = document.getElementById("table1").getElementsByTagName('tbody')[0];
+
+    var newRow = table.insertRow(table.length);
+
+    
+    
+    
+
+    cell1 = newRow.insertCell(0);
+    
+    var checkBox = document.getElementById("checkbox1");
+    if (checkBox.checked == true){
+    	cell1.innerHTML = "Active";
+  } else {
+  		cell1.innerHTML = "Inactive";
+     
+  }
+
+    cell2 = newRow.insertCell(1);
+    cell2.innerHTML = data.name;
+   
+
+    cell3= newRow.insertCell(2);
+    cell3.innerHTML=data.email;
+    
+    
+    cell4=newRow.insertCell(3);
+    cell4.innerHTML=document.getElementById("accounttype").value;
+    
+    
+    cell5=newRow.insertCell(4);
+    cell5.innerHTML=data.phone;
+    
+    
+    cell6=newRow.insertCell(5);
+    cell6.innerHTML=data.mode;
+    
+    
+    cell7=newRow.insertCell(6);
+    cell7.innerHTML=`<a style="cursor:pointer;font-size:20px;color:gray;text-align:center;"><i class="fa fa-eye"></i></a>
+    
+    <a style="cursor:pointer;font-size:20px;color:gray;text-align:center;" onclick="onDelete(this)"><i class="fa fa-trash-o"></i></a>
+    
+    <a style="cursor:pointer;font-size:20px;color:gray;text-align:center;" onclick="onEdit(this)"><i class="fa fa-pencil"></i></a>`;
+    
+}
+
+function resetForm() {
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("mode").value = "";
+    document.getElementById("accounttype").value = "";
+    document.getElementById("setactive").value = "";
+    selectedRow = null;
+}
+
+
+function onDelete1() {
+	cBox.style.display="block";
+}
+
+function onDelete(td) {
+	if (confirm('Are you sure to delete this record ?')) {
+    row = td.parentElement.parentElement.rowIndex;
+    document.getElementById("table1").deleteRow(row);
+
+    resetForm();
+    cBox.style.display="none";
+	}
+}
+
+function onEdit(td) {
+    modal.style.display="block";
+    document.getElementById("save").value="Save user dates";
+    document.getElementById("sen1").innerHTML="Edit user:";
+    document.getElementById("sen2").innerHTML="There you can change name,phone,email,mode,status";
+	selectedRow = td.parentElement.parentElement;
+    
+    document.getElementById("setactive").value=selectedRow.cells[0].innerHTML;
+    document.getElementById("name").value = selectedRow.cells[1].innerHTML;
+    document.getElementById("email").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("accounttype").value=selectedRow.cells[3].innerHTML;
+    document.getElementById("phone").value = selectedRow.cells[4].innerHTML;
+    document.getElementById("mode").value = selectedRow.cells[5].innerHTML;
+}
+
+
+
+function updateRecord(formData) {
+	var checkBox = document.getElementById("checkbox1");
+    if (checkBox.checked == true){
+    	selectedRow.cells[0].innerHTML = "Active";
+  } else {
+  		selectedRow.cells[0].innerHTML = "Inactive";
+     
+  }
+    selectedRow.cells[1].innerHTML = formData.name;
+    selectedRow.cells[2].innerHTML = formData.email;
+    selectedRow.cells[3].innerHTML = document.getElementById("accounttype").value;
+    selectedRow.cells[4].innerHTML = formData.phone;
+	selectedRow.cells[5].innerHTML = formData.mode;    
+}
+
+
+
+	
+
+	
+
+function onCancel(){
+		cBox.style.display="none";
+	}
+	
+
+	
+
+	var modal = document.getElementById("myModal");
+
+
+	
+
+
+ 
+	function add() {
+  	modal.style.display = "block";
+  	}	
+
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+  if(event.target == cBox){
+  	cBox.style.display="none";
+  }
+}
+</script>
+</body>
+</html>

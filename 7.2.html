@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <select id="countries" onchange="changeCity()">
+      <option>--Select country--</option>
+    </select>
+    <select id="cities">
+      <option>--Select city--</option>
+    </select>
+  
+
+
+
+
+  <script>
+
+  let countries = ["Kazakhstan","Russia","England","France"];
+  let cities_by_country = {"Kazakhstan":["Almaty","Astana","Karagandy"],"Russia":["Moscow","Saint-Petersburg","Kazan"],"England":["London","Manchester","Liverpool"],"France":["Paris","Lyon","Marseille"]};
+
+  for (var i=0;i<countries.length;i++){
+    var opt = document.createElement("OPTION");
+    var o = document.createTextNode(countries[i]);
+    opt.appendChild(o);
+    opt.setAttribute("value",countries[i]);
+    document.getElementById('countries').appendChild(opt);
+  }
+
+  
+  function changeCity(){
+    var countryList = document.getElementById('countries');
+    var citiesList = document.getElementById('cities');
+    var selCountry = countryList.options[countryList.selectedIndex].value;
+
+    var countriess = cities_by_country[selCountry];
+    
+    while(citiesList.options.length){
+      citiesList.remove(0);
+    }
+    
+
+    if(countriess){
+      var i;
+      for(i=0;i<countriess.length;i++){
+        var country = new Option(countriess[i],i);
+        citiesList.options.add(country);
+        
+        
+      }
+    }
+  }
+
+
+
+
+
+
+
+/*
+  var x = document.getElementById("countries").selectedIndex;
+  var y = document.getElementById("countries").options;
+
+  for (var i=0;i<Object.keys(cities_by_country).length;i++){
+    for(var j=0;j<Object.values(cities_by_country).length-1;j++){
+      if(y[x].text===Object.keys(cities_by_country)[i]){
+        var opt = document.createElement("OPTION");
+        var o = document.createTextNode(Object.values(cities_by_country)[i][j]);
+        opt.appendChild(o);
+        document.getElementById('cities').appendChild(opt);
+
+      }
+
+    } 
+  }
+  */
+
+
+  </script>
+  </body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <style>
+		
+		#insideBasket{
+		  border:1px solid red;
+		  text-align:center;
+		}
+
+		#car1{
+			border:1px solid red;
+			position: relative;
+			top:10px;
+			left:20px;
+			width:100px;
+			height:100px;
+		}
+
+		#car2{
+			border:1px solid red;
+			position: relative;
+			left:150px;
+			top:-62px;
+			width:100px;
+			height:100px;
+
+		}
+
+		#car3{
+			border:1px solid red;
+			position: relative;
+			left:285px;
+			top:-133px;
+			width:100px;
+			height:100px;
+
+		}
+		
+		#toyota2{
+			width:100px;
+			height:100px;
+
+
+		}
+		#toyota1{
+			width:100px;
+			height:100px;
+
+
+		}
+		#toyota3{
+			width:100px;
+			height:100px;
+
+
+		}
+
+		#b1{
+			position: absolute;
+			top:5px;
+			right:5px;
+		}
+		#b2{
+			position: absolute;
+			top:5px;
+			right:5px;
+		}
+		#b3{
+			position: absolute;
+			top:5px;
+			right:5px;
+		}
+	</style>
+   
+  </head>
+
+  <body>
+    <div id="insideBasket"><span id="items">0</span> items, total: <span id="sum">0</span>$</div>
+    <div id="cars">
+    	<div id="car1">
+    		<img id="toyota1" src="toyota1.jpg" >
+    		<button id="b1" onclick="b1()">ss</button>
+    	</div>
+    	<div id="car2">
+    		<img id="toyota2" src="toyota2.jpg">
+    		<button id="b2" onclick="b2()">ss</button>
+    	</div>
+    	<div id="car3">
+    		<img  id="toyota3" src="toyota3.jpg">
+    		<button id="b3" onclick="b3()">ss</button>
+    	</div>
+     
+    </div>
+
+
+    <script type="text/javascript">
+    	function b1(){
+    		items=items+1;
+    		sum=sum+20000;
+    		
+    		document.getElementById("items").innerHTML.value=items;
+    		document.getElementById("sum").innerHTML=sum;
+
+    	}
+    	function b2(){
+    		items=items+1;
+    		sum=sum+25000;
+    		document.getElementById("items").innerHTML=items.;
+    		document.getElementById("sum").innerHTML=sum;
+
+    	}
+    	function b3(){
+    		items=items+1;
+    		sum=sum+15000;
+    		document.getElementById("items").innerHTML=items;
+    		document.getElementById("sum").innerHTML=sum;
+
+    	}
+
+    		
+    </script>
+  </body>
+
+</html>

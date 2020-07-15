@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <style>
+		#cars{
+		  display:flex;
+		  flex-wrap:wrap;
+		}
+		.card{
+		  position:relative;
+		  width:100px;
+		  margin:5px;
+		  
+		}
+		.card .basket{
+		  background-color:;
+		  position:absolute;
+		  right:5px;
+		  top:5px;
+		  z-index:9;
+		}
+		#insideBasket{
+		  border:1px solid red;
+		  text-align:center;
+		}
+	</style>
+    
+  </head>
+
+  <body>
+  	<p id="demo"></p>
+    <div id="insideBasket"><span id="items">0</span> items, total: <span id="sum">0</span>$</div>
+    <div id="cars">
+    	
+    </div>
+
+    <script>
+    	let cars = [{brand:'Toyota',model:'Camry',year:1999,price:20000,image_url:"https://media.ed.edmunds-media.com/toyota/camry/2016/ot/2016_toyota_camry_LIFE1_ot_902163_1280.jpg"},{brand:'BMW',model:'X6',year:2014,price:25000,image_url:"https://media.ed.edmunds-media.com/bmw/x6/2016/oem/2016_bmw_x6_4dr-suv_xdrive50i_fq_oem_5_1280.jpg"},{brand:'Daewoo',model:'Nexia',year:2007,price:15000,image_url:"https://s.auto.drom.ru/i24207/c/photos/fullsize/daewoo/nexia/daewoo_nexia_695410.jpg"}];
+
+
+    	
+		for(var i=0;i<cars.length;i++){
+			var card_div = document.createElement('div');
+    		card_div.className="card";
+    		
+
+    		var basket_div = document.createElement("IMG");
+    		basket_div.setAttribute("src","shopcart.png");
+    		basket_div.setAttribute("width","15");
+    		basket_div.setAttribute("status","done");
+    		basket_div.className="basket";
+    		basket_div.id=cars[i].price;
+        		
+    		
+
+    	
+    		document.getElementById('cars').appendChild(card_div);
+    		card_div.appendChild(basket_div);
+
+    		var x = document.createElement("IMG");
+    		x.setAttribute("src",cars[i].image_url);
+    		x.setAttribute("width","100");
+    		x.setAttribute("height","70");
+    		card_div.appendChild(x);
+
+    		var para = document.createElement("P");
+    		para.innerText = cars[i].brand+" "+cars[i].model;
+    		card_div.appendChild(para);
+	}
+ 			
+    		let basket = document.querySelectorAll(".basket");
+    		
+    		var total=0;
+    		for(let click of basket){
+    			click.addEventListener("click", () =>{
+    				if(click.getAttribute('status')=='done'){
+    					document.getElementById("sum").innerHTML=document.getElementById("sum").innerHTML*1+click.id*1;
+    					document.getElementById("items").innerHTML=document.getElementById("items").innerHTML*1+1;
+
+    					click.setAttribute("status","none");
+    					click.setAttribute("src","dollarSign.png");
+    					click.setAttribute("height","15");
+    				}
+    				else{
+    					document.getElementById("sum").innerHTML=document.getElementById("sum").innerHTML*1-click.id*1;
+						document.getElementById("items").innerHTML=document.getElementById("items").innerHTML*1-1;
+
+						click.setAttribute("status","done");
+						click.setAttribute("src","shopcart.png");	
+
+    				}
+    			})
+    		}
+
+
+
+
+
+
+		
+
+
+    	
+
+    </script>
+  </body>
+
+</html>

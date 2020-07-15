@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spicy Restaurant</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style type="text/css">
+		body{
+			margin: 0px;
+			height: 100%;
+
+
+		}
+
+		.navbar{
+			width:100%;
+			height: 100px;
+			
+
+		}
+		.navbar ul{
+			list-style-type: none;
+			width: 450px;
+			height:25px;
+			position: absolute;
+			right:100px;
+			top:35px;
+		}
+		.navbar li{
+			float: left;
+
+		}
+		.navbar a{
+			text-align: center;
+			display: block;
+			margin-right:40px; 
+			text-decoration:none; 
+			color:black;
+
+
+		}
+
+		.navbar a.active{
+			color:blue;
+		}
+			
+		.navbar a:hover{
+			color:blue;
+		}
+
+		#spoonFork{
+			width:70px;
+			height:50px;
+			border:6px solid orange;
+			border-radius: 10px;
+			padding: 5px;
+			position: absolute;
+			top:25px;
+			left:100px;
+		}
+
+
+		.navbar p{
+			
+			position: absolute;
+			top:-10px;
+			left:210px;
+			font-size:40px;
+			color:orange;
+			font-family: 'URW Chancery L', cursive;
+		}
+
+		#steak{
+			width:1538px;
+			width:100%;
+			position: absolute;
+			height:500px;
+			top:0px;
+			 
+			
+
+		}
+
+		.steak{
+			
+			height:500px;
+			position: relative;
+			margin-top: 10px;
+		}
+
+		#innerBorder{
+			border:1px solid white;
+			border-collapse: collapse;
+			background-color: white;
+			opacity: 0.9;
+			z-index: 9999;
+			position: absolute;
+			top:110px;
+			left:200px;
+			width:500px;
+			height:250px;
+		}
+
+		#grilled{
+			color:orange;
+			font-size: 40px;
+			position: absolute;
+			top:-30px;
+			left:20px;
+
+		}
+
+		#wordGrill{
+			color:gray;
+			position: absolute;
+			top:40px;
+			left:24px;
+
+		}
+
+		#startingAt{
+			color:black;
+			position: absolute;
+			left:24px;
+			top:120px;
+			font-size: 25px;
+		}
+
+		#money{
+			color:black;
+			position: absolute;
+			left:24px;
+			top:115px;
+			font-size: 60px;
+		}
+
+		#orderNow{
+			height: 35px;
+			width:100px;
+			border:1px solid orange;
+			position: absolute;
+			background-color: orange;
+			bottom:24px;
+			left:220px;
+			color:white;
+			cursor: pointer;
+		}
+
+		.pages{
+			position: absolute;
+			left:760px;
+			margin-top: 10px;
+			z-index: 6;	
+		}
+
+		
+		.dot {
+  			cursor: pointer;
+  			height: 10px;
+  			width: 10px;
+  			margin: 0 2px;
+  			border:1px solid gray;
+  			background-color: gray;
+  			border-radius: 50%;
+  			display: inline-block;
+  			transition: background-color 0.6s ease;
+		}
+
+		.dot:hover {
+  			background-color: orange;
+  			border:1px solid orange;
+		}
+
+		.dot.active{
+			background-color: orange;
+			border:1px solid orange;
+		}
+
+		.mealPhoto{
+			position: relative;
+		}
+		#welcome{
+			position: absolute;
+			left:610px;
+			top:-20px;
+			font-size: 30px; 
+			text-align: center;
+		}
+
+		#wordWelcome{
+			position: absolute;
+			left:565px;
+			top:40px;
+			color:black;
+			text-align: center;
+		}
+
+		.mealPhoto{
+			position: relative;
+			
+			margin-top: 50px;
+			height: 500px;
+			
+			
+			left:0px;
+
+		}
+		.menu{
+			position: absolute;
+			top:120px;
+			left:120px;
+			width: 1300px;
+			
+			height: 300px;
+
+			
+		}
+
+		#hamburger{
+						
+			width:400px;
+			height: 300px;
+			border-radius: 20px;
+		}
+
+		#macaron{
+			
+			width:400px;
+			height: 300px;
+			
+			border-radius: 20px;
+		}
+
+		#krevetka{
+			width: 400px;
+			height: 300px;
+			border-radius: 20px;
+			
+		}
+
+		#prevNext{
+			cursor: pointer;
+			position: absolute;
+			left:1370px;
+			top:80px;
+			
+			width:60px;
+			color:gray;
+	
+		}
+
+		#hamburgerSection{
+			position:relative;
+			
+			border-radius: 20px;
+			
+			width: 400px;
+			height: 300px;
+		}
+
+		#macaronSection{
+			position:relative;
+			
+			left:450px;
+			top:-305px;
+			border-radius: 20px;
+			
+			width: 400px;
+			height: 300px;
+
+		}
+
+		#krevetkaSection{
+			position: relative;
+			left:900px;
+			top:-610px;
+			border-radius: 20px;
+			
+			width: 400px;
+			height: 300px;
+
+		}
+		.prev{
+			margin-left:10px;
+			font-size:25px;
+		}
+		.next{
+
+			font-size: 25px;
+		}
+		.prev:hover, .next:hover{
+			color:orange;
+				
+		}
+		.next.active{
+			color: orange;
+		}
+
+		#black_border{
+			position: absolute;
+			top:120px;
+			left:0px;
+			
+			height: 180px;
+			border-radius: 0px 0px 20px 20px;
+			width:400px;
+			background-color: rgba(0,0,0,0.5);
+		}
+
+		#macaronWord{
+			position: absolute;
+			top:0px;
+			right:130px;
+			color:white;
+			font-size: 22px;
+			
+			width:125px;
+			text-align: center;
+
+
+		}
+
+		#orderMac{
+			position: absolute;
+			left:141px;
+			bottom:30px;
+			border:1px solid orange;
+			color:white;
+			background-color: orange;
+			height: 40px;
+			width:130px;
+			font-size: 17px;
+			cursor: pointer;
+
+		}
+
+		#circlePrice{
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			position: absolute;
+			background-color: white;
+			bottom:-19px;
+			right: -10px;
+			z-index: 8;
+
+		}
+		#price{
+			font-weight:bold;
+			position: absolute;
+			left:9px;
+			font-size: 20px;
+			top:5px;
+		}
+
+		.whyChooseUs{
+		
+			height: 450px;
+			position: relative;
+
+		}
+
+		#whyWord{
+			position: absolute;
+			
+			left:665px;
+			font-size: 30px;
+		}
+
+		.bestCoffee{
+			position: absolute;
+			width: 400px;
+			height: 300px;
+			
+			top:100px;
+			left:120px;
+
+
+		}
+
+		#coffee{
+			position: absolute;
+			top:50px;
+			left:165px;
+			font-size: 70px;
+			color: blue;
+		}
+
+		#coffee1{
+			position: absolute;
+			top:50px;
+			left:185px;
+			font-size: 70px;
+			color: blue;
+
+		}
+
+		#coffeeWord{
+			position: absolute;
+			left:155px;
+			top:110px;
+			font-size: 20px;
+
+		}
+
+		#coffeeInstruc{
+			position: absolute;
+			
+			top:150px;
+			
+			text-align: center;
+			font-size: 14px;
+			color:black;
+		}
+
+		.goodMusic{
+			position:absolute;
+			
+			left:570px;
+			top:100px;
+			
+			
+			width: 400px;
+			height: 300px;
+		}
+
+		.easyLocation{
+			position:absolute;
+			left:1020px;
+			top:100px;
+			
+			
+			width: 400px;
+			height: 300px;	
+		}
+
+		.featuredMenu{
+			
+			position: relative;
+			height: 700px;
+		}
+
+
+		#featMenu{
+			position: absolute;
+			
+			left:665px;
+			font-size: 30px;
+
+		}
+
+		.hotDogs{
+			position: absolute;
+			
+			left:120px;	
+			top:120px;
+			width: 620px;
+			height: 150px;
+
+		}
+
+		#hotDogsImage{
+			position: absolute;
+
+			left:0px;
+			width:200px;
+			height:150px;
+			border-radius: 20px;
+		}
+
+		#mealWord{
+			position: absolute;
+			top:-27px;
+			left:220px;
+			font-size: 23px;
+		}
+
+		#mealWord:hover{
+			color:red;
+			cursor: pointer;
+		}
+
+		#mealInstruc{
+			position: absolute;
+			top:30px;
+			left:220px;
+			font-size: 15px;
+		}
+
+		.buritto{
+			position: absolute;
+			
+			left:120px;	
+			top:300px;
+			width: 620px;
+			height: 150px;
+		}
+
+		.frenchToast{
+			position: absolute;
+			left:120px;	
+			top:480px;
+			width: 620px;
+			height: 150px;	
+		}
+
+		.bakedBeans{
+			position: absolute;
+			
+			left:760px;	
+			top:120px;
+			width: 620px;
+			height: 150px;
+		}
+
+		.cupcakes{
+			position: absolute;
+			
+			left:760px;	
+			top:300px;
+			width: 620px;
+			height: 150px;	
+		}
+		.guancamole{
+			position: absolute;
+			
+			left:760px;	
+			top:480px;
+			width: 620px;
+			height: 150px;
+		}
+
+		#seeAll{
+			position: absolute;
+			bottom:0px;
+			left:688px;
+			border:1px solid orange;
+			color:white;
+			background-color: orange;
+			height: 35px;
+			width:130px;
+			font-size: 17px;
+			cursor: pointer;
+
+		}
+
+		.testimonials{
+			position: relative;
+			
+			height: 550px;
+		}
+
+		#testWord{
+			position: absolute;
+			top:30px;
+			left:675px;
+			font-size: 30px;
+		}
+
+		.comment1{
+			position: absolute;
+			top:200px;
+			left:120px;
+			border:1px solid blue;
+			background-color: blue;
+			width: 620px;
+			height: 150px;
+			border-radius: 20px;
+		}
+
+		#willSmith1{
+			position: absolute;
+			top:20px;
+			left:10px;
+			
+			color:white;
+			width: 600px;
+		}
+
+		.comment2{
+			position: absolute;
+			top:200px;
+			left:760px;
+			background-color: blue;
+			border:1px solid blue;
+			width: 620px;
+			height: 150px;
+			border-radius: 20px;
+
+		}
+
+		.woman{
+			position: relative;
+			top:355px;
+			left:500px;
+			
+			width: 100px;
+			height:100px;
+		}
+
+		#womanImage{
+			width: 60px;
+			height:60px;
+			border-radius: 50%;
+			position: absolute;
+			left:20px;
+			top:10px;
+
+		}
+
+		#woman1{
+			position: absolute;
+			bottom:-10px;
+		}
+
+		.woman2{
+			position: relative;
+			top:254px;
+			left:1150px;
+			
+			width: 100px;
+			height:100px;
+		}
+
+		.pages1{
+			position: relative;
+			top:260px;
+			left:728px;
+			width:50px;
+			height: 20px;
+		
+
+		}
+		.pages1 span{
+			width:7px;
+			height: 7px;
+		}
+
+		.footer{
+			background-color: orange;
+			position: relative;
+			border:5px solid orange;
+			height: 400px;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.getInTouch{
+			position: relative;
+			left:120px;
+			top:70px;
+			
+			height: 250px;
+			width: 260px;
+		}
+
+		#touchWord{
+			position: absolute;
+			font-size: 23px;
+			color:white;
+			top:-25px;
+			left:0px;
+
+		}
+
+		#location{
+			color:white;
+			position: absolute;
+			top:30px;
+			left:25px;
+			
+			width: 190px;
+			text-align: left;
+			
+		}
+
+		#locationIcon{
+			color:white;
+			position: absolute;
+			font-size: 30px;
+			top:50px;	
+		}
+
+		#phoneIcon{
+			color:white;
+			position: absolute;
+			font-size: 30px;
+			top:98px;	
+		}
+
+		#phone{
+			color:white;
+			position: absolute;
+			top:88px;
+			left:25px;
+			
+			width: 190px;
+			text-align: left;
+		}
+
+		#faxIcon{
+			color:white;
+			position: absolute;
+			font-size: 20px;
+			top:146px;
+		}
+
+		#fax{
+			color:white;
+			position: absolute;
+			top:130px;
+			left:25px;
+			
+			width: 190px;
+			text-align: left;
+		}
+
+		#emailIcon{
+			color:white;
+			position: absolute;
+			font-size: 20px;
+			top:188px;
+		}
+		#email{
+			position: absolute;
+			top:173px;
+			left:25px;
+			color:white;
+			width: 230px;
+			text-align: left;
+		}
+
+		.usefulLinks{
+			color:white;
+			position: relative;
+			left:450px;
+			top:-183px;
+			height: 250px;
+			width: 260px;
+		}
+
+		#linksWord{
+			color:white;
+			position: absolute;
+			font-size: 20px;
+			top:-22px;
+			left:0px;
+		}
+
+		.usefulLinks ul{
+			list-style-type: none;
+			position: relative;
+			width: 100px
+			top:60px;
+			left:0px;
+			
+
+		}
+
+		.usefulLinks a{
+			text-decoration:none; 
+			color:white;
+			position: relative;
+			left:-40px;
+			bottom:-40px;
+			margin-bottom: 10px;
+			display: block;
+			
+		}
+
+		.followUs{
+			color:white;
+			position: relative;
+			left:780px;
+			top:-434.5px;
+			
+			height: 250px;
+			width: 260px;			
+		}
+
+		#followWord{
+			color:white;
+			position: absolute;
+			font-size: 23px;
+			top:-25px;
+			left:0px;
+
+		}
+
+		.facebook{
+			cursor: pointer;
+			position: relative;
+			top:60px;
+			background-color: red;
+			width:40px;
+			height: 40px;
+			border-radius:50%; 
+		}
+
+		#facebookIcon{
+			position: absolute;
+			top:11px;
+			left:14px;
+			color:white;
+			font-size: 20px;
+		}
+
+		.twitter{
+			cursor: pointer;
+			position: relative;
+			top:20px;
+			left:50px;
+			background-color: red;
+			width:40px;
+			height: 40px;
+			border-radius:50%; 
+		}
+
+		#twitterIcon{
+			position: absolute;
+			top:11px;
+			left:12px;
+			color:white;
+			font-size: 20px;
+		
+		}
+
+		.google{
+			cursor: pointer;
+			position: relative;
+			top:-19px;
+			left:100px;
+			background-color: red;
+			width:40px;
+			height: 40px;
+			border-radius:50%; 
+		}
+
+		#googleIcon{
+			position: absolute;
+			top:10px;
+			left:10px;
+			color:white;
+			font-size: 20px;
+		}
+
+		.newsletter{
+			color:white;
+			position: relative;
+			left:1100px;
+			top:-686px;
+			
+			height: 250px;
+			width: 260px;		
+
+		}
+
+		#newsWord{
+			color:white;
+			position: absolute;
+			font-size: 23px;
+			top:-26px;
+			left:0px;
+		}
+
+		#emailId{
+			position: absolute;
+			top:50px;
+			border:1px solid black;
+			width: 190px;
+			height: 25px;
+		}
+
+		#subscribe{
+			position: absolute;
+			top:100px;
+			border:1px solid gray;
+			color:white;
+		
+			background-color: orange;
+			height: 25px;
+			width:110px;
+			font-size: 17px;
+			cursor: pointer;
+		}
+
+		.privacy{
+			position: absolute;
+			bottom: 0px;
+			height: 20px;
+			
+			width:1503px;
+		}
+
+		#copyright{
+			position: absolute;
+			top:-15px;
+			left:630px;
+			color:white;
+		}
+
+		#c{
+			margin-right: 2px;
+			margin-left: 2px;
+		}
+
+		#stu{
+			text-decoration: none;
+			color:white;
+		}
+
+	</style>
+
+		
+		
+</head>
+<body>
+	<div class="navbar">
+		<img id="spoonFork" src="fork-and-spoon-icon.jpg" alt="fork and spoon">
+		<p>Spicy Restaurant</p>
+		<ul>
+			<li><a href="#" class="active">Home</a></li>
+  			<li><a href="#">About Us</a></li>
+  			<li><a href="#">Menu</a></li>
+  			<li><a href="#">Blog</a></li>
+ 	 		<li><a href="#">Contact</a></li>
+ 		 </ul>
+		
+	</div>
+
+	<div class="steak">
+		<img id="steak" src="steak.jpg">
+		<div id="innerBorder">
+			<p id="grilled">GRILLED SANDWICH</p>
+			<p id="wordGrill">In our restaurant we have new meal.Come and taste it.A cheese sandwich is a basic sandwich generally made with one or more varieties of cheese on any sort of bread, such as flat bread or wheat bread, that may include spreads such as butter or mayonnaise.</p>
+			<p id="startingAt">Starting At</p>
+			<p id="money"><strong>$8.50</strong></p>
+			<button type="button" id="orderNow">Order Now</button>
+		</div>
+	</div>
+
+
+	<div class="main_section">
+		<div class="pages">
+		  	<span class="dot active" onclick="currentSlide(1)"></span> 
+  			<span class="dot" onclick="currentSlide(2)"></span> 
+  			<span class="dot" onclick="currentSlide(3)"></span> 		
+		</div>
+	</div>
+
+		<div class="mealPhoto">
+			<p id="welcome"><strong>Welcome to our restaurant!</strong></p>
+			<p id="wordWelcome">Whatever your occasion,Pedro's restaurant makes it one to remember!</p>
+			<div id="prevNext">
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next active" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<div class="menu">
+				<div id="hamburgerSection">
+					<img id="hamburger" src="hamburder.jpg" alt="hamburder">
+					<div id="black_border">
+						<p id="macaronWord">Hamburger Studentski</p>
+						<button type="button" id="orderMac">Order Now</button>
+						<div id="circlePrice">
+							<p id="price">$7.50</p>
+						</div>
+					</div>
+				</div>
+				<div id="macaronSection">
+					<img  id="macaron" src="macaron.jpg" alt="macaron">
+					<div id="black_border">
+						<p id="macaronWord">Macaron Studentski</p>
+						<button type="button" id="orderMac">Order Now</button>
+						<div id="circlePrice">
+							<p id="price">$4.50</p>
+						</div>
+					</div>
+				</div>
+				<div id="krevetkaSection">
+					<img id="krevetka" src="krevetka.jpg" alt="krevetka">
+					<div id="black_border">
+						<p id="macaronWord">Krevetka Studentski</p>
+						<button type="button" id="orderMac">Order Now</button>
+						<div id="circlePrice">
+							<p id="price">$10.50</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="whyChooseUs">
+			<p id="whyWord">Why Choose Us?</p>
+			<div class="bestCoffee">
+				<i id="coffee" class="fa fa-coffee"></i>
+				<p id="coffeeWord">Best Coffee</p>
+				<p id="coffeeInstruc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div>
+			<div class="goodMusic">
+				<i id="coffee" class="fa fa-music"></i>
+				<p id="coffeeWord">Good Music</p>
+				<p id="coffeeInstruc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+				
+			</div>
+			<div class="easyLocation">
+				<i id="coffee1" class="fa fa-map-marker"></i>
+				<p id="coffeeWord">Easy Location</p>
+				<p id="coffeeInstruc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+				
+			</div>
+		</div>
+
+		<div class="featuredMenu">
+			<p id="featMenu">Featured Menu</p>
+			<div class="hotDogs">
+				<img id="hotDogsImage" src="hotdogs.jpg" alt="Hot dogs">
+				<p id="mealWord">Hot dogs</p>
+				<p id="mealInstruc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div>
+			<div class="buritto">
+				<img id="hotDogsImage" src="hotdogs.jpg" alt="Hot dogs">
+				<p id="mealWord">Buritto</p>
+				<p id="mealInstruc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div>
+			<div class="frenchToast">
+				<img id="hotDogsImage" src="hotdogs.jpg" alt="Hot dogs">
+				<p id="mealWord">French Toast</p>
+				<p id="mealInstruc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div>
+			<div class="bakedBeans">
+				<img id="hotDogsImage" src="hotdogs.jpg" alt="Hot dogs">
+				<p id="mealWord">Baked Beans</p>
+				<p id="mealInstruc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div>
+			<div class="cupcakes">
+				<img id="hotDogsImage" src="hotdogs.jpg" alt="Hot dogs">
+				<p id="mealWord">Cupcakes</p>
+				<p id="mealInstruc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div>
+			<div class="guancamole">
+				<img id="hotDogsImage" src="hotdogs.jpg" alt="Hot dogs">
+				<p id="mealWord">Guancamole</p>
+				<p id="mealInstruc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</div>
+			<button type="button" id="seeAll">See All</button>
+		</div>
+		<div class="testimonials">
+			<p id="testWord">Testimonials</p>
+			<div class="comment1">
+				<p id="willSmith1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur.</p>
+			</div>
+			<div class="woman">
+				<img id="womanImage" src="hotdogs.jpg" alt="Hot dogs">
+				<p id="woman1">Mrs.Will Smith</p>
+			</div>
+			<div class="comment2">
+				<p id="willSmith1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur.</p>
+			</div>
+			<div class="woman2">
+				<img id="womanImage" src="hotdogs.jpg" alt="Hot dogs">
+				<p id="woman1">Mrs.Will Smith</p>
+				
+			</div>
+			<div class="pages1">
+				<span class="dot active" onclick="currentSlide(1)"></span> 
+  				<span class="dot" onclick="currentSlide(2)"></span> 
+  				<span class="dot" onclick="currentSlide(3)"></span>
+  			</div> 	
+		</div>
+		<div class="footer">
+			<div class="getInTouch">
+				<p id="touchWord">Get in Touch</p>
+				<i id="locationIcon" class="fa fa-map-marker"></i><p id="location">34234 Golf Course Road,Avenue,US.</p>
+				<i id="phoneIcon" class="fa fa-mobile-phone"></i><p id="phone">Telephone: +1809 876 6458</p>
+				<i id="faxIcon" class="fa fa-fax"></i><p id="fax">FAX: +1809 876</p>
+				<i id="emailIcon" class="fa fa-envelope"></i><p id="email">Email: <a id="stu" href="#">180103273@stu.sdu.edu.kz</a></p>
+				
+			</div>
+
+			<div class="usefulLinks">
+				<p id="linksWord">Useful Links</p>
+				<ul>
+					<li><a href="#">Home</a></li>
+  					<li><a href="#">About Us</a></li>
+  					<li><a href="#">Menu</a></li>
+  					<li><a href="#">Services</a></li>
+ 	 				<li><a href="#">Contact</a></li>
+ 		 		</ul>
+			</div>
+			
+			<div class="followUs">
+				<p id="followWord">Follow Us</p>
+				<div class="facebook">
+					<i id="facebookIcon" class="fa fa-facebook"></i>
+				</div>
+				<div class="twitter">
+					<i id="twitterIcon" class="fa fa-twitter"></i>
+				</div>
+				<div class="google">
+					<i id="googleIcon" class="fa fa-google-plus"></i>
+				</div>
+			</div>
+			<div class="newsletter">
+				<p id="newsWord">Newsletter</p>
+				<input id="emailId" type="text" name="FirstName" value="" placeholder="Email id">
+				<button type="button" id="subscribe">Subscribe</button>
+				
+			</div>
+			<div class="privacy">
+				<p id="copyright">Spicy Restaurant<i id="c" class="fa fa-copyright"></i>2014 Privacy Policy</p>
+				
+			</div>
+		</div>
+
+</body>
+</html>

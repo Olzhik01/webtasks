@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    
+    
+    var images=["toyota_krasniy.jpg","toyota1.jpg","toyota2.jpg","toyota3.jpg","toyota4.jpg"];
+    var i=images.length;
+
+    function changeR(){
+      if(i<images.length-1){
+        i++;
+    }
+    else{
+      i=0;
+    }
+      document.getElementById('imgs').src=images[i]; 
+    }
+    
+  
+    function changeL(){
+      if(i<images.length+1 && i>1){
+        i--;
+      }
+      else{
+        i=images.length;
+      }
+      document.getElementById('imgs').src=images[i-1]; 
+    }
+
+    function i1(){
+      document.getElementById('imgs').src="toyota_krasniy.jpg";
+      document.getElementById('text').innerHTML="Toyota Motor Corporation (Japanese: トヨタ自動車株式会社 Hepburn: Toyota Jidōsha KK, IPA: [toꜜjota], English: /tɔɪˈoʊtə/) is a Japanese multinational automotive manufacturer headquartered in Toyota, Aichi, Japan. In 2017, Toyota's corporate structure consisted of 364,445 employees worldwide[4] and, as of September 2018, was the sixth-largest company in the world by revenue.";
+
+    }
+    function i2(){
+      document.getElementById('imgs').src="toyota1.jpg";
+      document.getElementById('text').innerHTML="With a punk attitude and tons of ambition Samantha Payne and the team at Open Bionics are changing lives by creating unique, advanced and affordable bionic limbs that empower people.As a travel photographer, Johan Lolos, aka @lebackpacker, travels the world to discover and capture natural beauty, as well as to document the different cultures he encounters.";     
+    }
+    function i3(){
+      document.getElementById('imgs').src="toyota2.jpg";  
+      document.getElementById('text').innerHTML="The company was founded by Kiichiro Toyoda in 1937, as a spinoff from his father's company Toyota Industries to create automobiles. Three years earlier, in 1934, while still a department of Toyota Industries, it created its first product, the Type A engine, and its first passenger car in 1936, the Toyota AA. ";    
+    }
+    function i4(){
+      document.getElementById('imgs').src="toyota3.jpg"; 
+      document.getElementById('text').innerHTML="Toyota is headquartered in Toyota City, Aichi.[11] The main headquarters of Toyota is located in a four-story building in Toyota. As of 2006, the head office has the Toyota logo and the words . The Toyota Technical Center, a 14-story building, and the Honsha plant, Toyota's second plant engaging in mass production and formerly named the Koromo plant, are adjacent to one another in a location near the headquarters. ";
+
+    }
+    function i5(){
+      document.getElementById('imgs').src="toyota4.jpg";      
+      document.getElementById('text').innerHTML="On June 14, 2013, Toyota Motor Corporation. announced the appointment of external board members; this was a first for the corporation and occurred following approval from general shareholders at a meeting on the same day. Additionally, Vice Chairman Takeshi Uchiyamada replaced Fujio Cho as chairman, as the latter became an honorary chairman while Toyoda remains in the post of president.[15]"
+    }
+
+  
+
+   
+
+
+    
+    
+  </script>
+<style>
+#carousel img{
+  width:125px;
+  height:70px;
+  margin-top:17px;
+  margin-left: 10px;
+  position: relative;
+  left:90px;
+   box-shadow: 0px 1px 8px 2px #888888;
+   cursor: pointer;
+  
+
+
+
+}
+#carousel{
+  display:flex;
+  border:1px solid black;
+  background-color: white;
+  border-radius:0px 5px 5px 0px;
+  position: absolute;
+  top:525px;
+  left:30px;
+  height: 100px;
+  width: 900px;
+  z-index: 2; 
+
+}
+#bigImage img{
+  position: absolute;
+  left:100px;
+  top:100px;
+  width:1100px;
+  height:550px;
+  z-index: 1;
+}
+
+#imgs{
+  position: absolute;
+  left:100px;
+  top:100px;
+  width:1100px;
+  height:550px;
+  z-index: 1;
+
+}
+#lside{
+  position: absolute;
+    width:3px;
+    height:102px;
+    background-color: #FF4141;
+    top:-0.5px;
+    bottom: 0.5px;
+    left: 0px;
+
+}
+#rside{
+  display: flex;
+  position: absolute;
+  right:265px;
+  top:80px;
+  border:1px solid #3B3B3B;
+  background-color: #3B3B3B;
+  height: 600px;
+  width:300px;
+  z-index: 3;
+  box-shadow: 0px 1px 8px 2px #888888;
+
+}
+#lchange{
+  position: absolute;
+  left:30px;
+  top:35px;
+  border-radius: 50%;
+  border:1px solid white;
+  box-shadow: 0px 1px 8px 2px #888888; 
+  height:30px;
+  width:30px; 
+  background-color: white;
+  cursor: pointer;
+}
+#arrow{
+    position: absolute;
+    width:16px;
+    height: 1px;
+    right:2px;
+    top:14px;
+    padding-left: 5px;
+    background-color: gray;
+  }
+  #arrow::after {
+  content: '';
+  position: absolute;
+  width: 11px;
+  height: 1px;
+  top: -4px;
+  right: 2px;
+  left:-1.5px;
+  background-color: gray;
+  border-radius: 5px;
+  transform: rotate(-45deg);
+}
+ #arrow::before {
+  content: '';
+  position: absolute;
+  width: 11px;
+  height: 1px;
+  top: 4px;
+  right: 2px;
+  left:-1.5px;
+  background-color: gray;
+  border-radius: 5px;
+  transform: rotate(45deg);
+}
+#rchange{
+  position: absolute;
+  right:60px;
+  top:35px;
+  border-radius: 50%;
+  border:1px solid white;
+  box-shadow: 0px 1px 8px 2px #888888; 
+  height:30px;
+  width:30px;
+  background-color: white;
+  cursor:pointer;
+}  
+#arrow1{
+    position: absolute;
+    width:16px;
+    height: 1px;
+    right:3px;
+    top:14px;
+    padding-left: 5px;
+    background-color: gray;
+
+  }
+  #arrow1::after {
+  content: '';
+  position: absolute;
+  width: 11px;
+  height: 1px;
+  top: -5px;
+  right: -1px;
+  background-color: gray;
+  border-radius: 5px;
+  transform: rotate(45deg);
+}
+ #arrow1::before {
+  content: '';
+  position: absolute;
+  width: 11px;
+  height: 1px;
+  top: 4px;
+  right: -1.5px;
+  background-color: gray;
+  border-radius: 5px;
+  transform: rotate(-45deg);
+}
+#toyota{
+  z-index: 4;
+  color:white;
+  position: absolute;
+  right:400px;
+  top:100px;
+  font-size: 50px;
+  font-family:"Times New Roman", Times, serif; 
+}
+#toyota1{
+  z-index: 4;
+  color:white;
+  position: absolute;
+  right:340px;
+  top:150px;
+  font-size: 50px;
+  font-family:"Times New Roman", Times, serif; 
+
+}
+#text{
+  position: absolute;
+  top:210px;
+  margin-bottom: 15px;
+  bottom:200px;
+  color:white;
+  font-size: 18px;
+
+}
+
+#show{
+  position: absolute;
+  bottom: 80px;
+  left:15px;
+  height:30px;
+  width:200px;
+  font-size: 20px;
+  background-color:#3B3B3B;
+  border:1px solid white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+
+::placeholder{
+  color:white;
+  padding-left:20px;
+
+}
+#more{
+  position: absolute;
+  height: 42px;
+  width: 35px;
+  bottom:80px;
+  right: 48px;
+  background-color: white;
+  border:none;
+}
+
+#more:hover{
+  background-color:  #CDFF00;
+}
+#arrow2{
+    position: absolute;
+    width:15px;
+    height: 1.5px;
+    right:8px;
+    top:20px;
+    padding-left: 5px;
+    background-color: gray;
+
+  }
+  #arrow2::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  top: -4px;
+  right: -1px;
+  background-color: gray;
+  border-radius: 5px;
+  transform: rotate(45deg);
+}
+ #arrow2::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  top: 4px;
+  right: -1.5px;
+  background-color: gray;
+  border-radius: 5px;
+  transform: rotate(-45deg);
+}
+
+</style>
+
+  
+    
+  </head>
+
+  <body>
+    <div id="bigImage">
+      <img id="imgs" src="toyota_krasniy.jpg">
+      <p id="toyota">Here is the coolest</p>
+      <p id="toyota1">new car - Toyota</p>
+      
+    </div>
+    <div id="rside">
+      <p id="text">Toyota Motor Corporation (Japanese: トヨタ自動車株式会社 Hepburn: Toyota Jidōsha KK, IPA: [toꜜjota], English: /tɔɪˈoʊtə/) is a Japanese multinational automotive manufacturer headquartered in Toyota, Aichi, Japan. In 2017, Toyota's corporate structure consisted of 364,445 employees worldwide[4] and, as of September 2018, was the sixth-largest company in the world by revenue.</p>
+      <form action="https://www.toyota-europe.com" target="_blank">
+        <input id="show" type="text" placeholder="Show more" name="Show more">
+        <button id="more">
+            <div id="arrow2"></div>
+          </button>
+      </form>
+    </div>
+    <div id="carousel">
+          <div id="lside"></div>
+          <button id="lchange" onclick="changeL()">
+            <div id="arrow"></div>
+          </button>
+          <button id="rchange" onclick="changeR()">
+            <div id="arrow1"></div>
+          </button>
+          <img id="i1" src="toyota_krasniy.jpg" onclick="i1()" />
+          <img id="i2" src="toyota1.jpg"/ onclick="i2()">
+          <img id="i3" src="toyota2.jpg"/ onclick="i3()">
+          <img id="i4" src="toyota3.jpg"/ onclick="i4()">
+          <img id="i5" src="toyota4.jpg"/ onclick="i5()">
+    </div>
+  </body>
+
+</html>

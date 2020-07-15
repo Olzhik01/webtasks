@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		body{
+			margin:0px;
+		
+		}
+		#topnav{
+			border:1px solid #5D38DB;
+			width:100%;
+			height:79.38px;
+			background-color: #5D38DB;
+			display: flex;
+			
+		}
+
+		#settings{
+			position: fixed;
+			left:0px;
+			border:1px solid white;
+			width:570px;
+			height: 100%;
+					
+		}
+
+		#disabled{
+			display: none;
+		}
+
+		#positionX{
+			width:371px;
+			height: 23px;
+			border:1px solid black;
+			
+		}
+		#tools1{
+			position: relative;
+			top:50px;
+			left:20px;
+		}
+		#labelX{
+
+			margin-right:42px; 
+			font-size: 18px;
+			font-family: AktivGrotesk-Regular;
+		}
+		
+		#tools2{
+			position: relative;
+			top:70px;
+			left:20px;
+		}
+
+
+		#positionY{
+			width:371px;
+			height: 23px;
+			border:1px solid black;
+			
+
+		}
+
+		#labelY{
+			
+			margin-right:42px;
+			font-size: 18px;
+			font-family: AktivGrotesk-Regular;
+		}
+		#tools3{
+			position: relative;
+			top:90px;
+		}
+		#labelType{
+			margin-left:20px;
+			margin-right:20px;
+			font-size: 18px;
+			font-family: AktivGrotesk-Regular;
+
+		}
+		#positionType{
+			width:371px;
+			height: 23px;
+			border:1px solid black;
+		}
+
+		#tools4{
+			position: relative;
+			top:110px;
+			left:20px;
+		}
+
+		#labelO{
+			margin-right:70px;
+			font-size: 18px;
+			font-family: AktivGrotesk-Regular;
+		}
+
+		#objects{
+			width:378px;
+			height: 23px;
+			border:1px solid black;
+		}
+
+		#tools5{
+			position: relative;
+			top:130px;
+			left:20px;
+		}
+
+		#properties{
+			width:378px;
+			height: 23px;
+			border:1px solid black;
+
+		}
+
+		#labelP{
+			
+			margin-right:28px;
+			font-size: 18px;
+			font-family: AktivGrotesk-Regular;
+
+		}
+		#wish{
+			margin-left:0px;
+			font-size: 10px;
+			color:gray;
+		}
+
+		#tools6{
+			position: relative;
+			top:140px;
+			left:18px;
+
+		}
+
+		#addObject{
+			width:506px;
+			height:40px;
+			border:1px solid #5D38DB;
+			background-color: #5D38DB;
+			color:white;
+			font-size: 15px;
+
+		}
+
+		.tab{
+			border-bottom: 1px solid #D8D8D8;
+			height: 80px;
+			font-size: 20px;
+
+
+
+		}
+
+		.tab a{
+			text-decoration:none;
+			color:black;
+			float: left;
+			display: block;
+			width: 180px;
+			margin-left:50px;
+			text-align: center;
+			margin-top: 47px;
+			padding-bottom: 8px;
+			cursor: pointer;
+
+		}
+		.tab a:hover{
+		border-bottom:3px solid #8954BA;
+		color:#8954BA;
+		
+		}
+
+
+		.tab a.active{
+		border-bottom:3px solid #8954BA;
+		color:#8954BA;
+		}
+
+		.tabcontent{
+			display: none;
+			
+		}
+
+		#frame{
+			border:1px solid white;
+			position: fixed;
+			left:571px;
+			background-color:#D8D8D8;
+			height:665px;
+			width:964px;
+		}
+
+		#background{
+			background-color: white;
+			position: relative;
+			border:1px solid gray;
+			height:600px;
+			width: 900px;
+			margin-left:35px;
+			margin-top: 32px;
+		}
+		#text{
+			position: absolute;
+			z-index: 1;
+			top:200px;
+			left:270px;
+			font-size: 50px;
+			color:gray;
+
+		}
+
+		#frameProp1{
+			position: relative;
+			top:50px;
+			left:20px;
+
+		}
+
+		#labelB{
+			margin-right:42px; 
+			font-size: 18px;
+			font-family: AktivGrotesk-Regular;
+
+		}
+
+		#background1{
+			width:371px;
+			height: 23px;
+			border:1px solid black;
+
+		}
+
+		#frameProp2{
+			position: relative;
+			top:70px;
+			left:20px;
+
+		}
+
+		#labelR{
+			margin-right:32px; 
+			font-size: 18px;
+			font-family: AktivGrotesk-Regular;
+		}
+
+		#border{
+			width:371px;
+			height: 23px;
+			border:1px solid black;
+		}
+
+		#frameProp3{
+			position: relative;
+			top:90px;
+			left:20px;
+		}
+
+		#labelW{
+			margin-right:86px; 
+			font-size: 18px;
+			font-family: AktivGrotesk-Regular;
+		}
+
+		#width{
+			width:371px;
+			height: 23px;
+			border:1px solid black;
+		}
+
+		#frameProp4{
+			position: relative;
+			top:110px;
+			left:20px;
+		}
+
+		#labelH{
+			margin-right:81px; 
+			font-size: 18px;
+			font-family: AktivGrotesk-Regular;
+		}
+		#height{
+			width:371px;
+			height: 23px;
+			border:1px solid black;
+		}
+
+		#frameProp5{
+			position: relative;
+			top:130px;
+			left:20px;
+
+		}
+
+		#wish1{
+			margin-left:0px;
+			font-size: 10px;
+			color:gray;
+
+		}
+		#labelP1{
+			margin-right:52px;
+			font-size: 18px;
+			font-family: AktivGrotesk-Regular;
+		}
+
+		#properties1{
+			width:371px;
+			height: 23px;
+			border:1px solid black;
+
+		}
+
+		#frameProp6{
+			position: relative;
+			top:140px;
+			left:17px;
+		}
+
+		#saveFrame{
+			width:512px;
+			height:40px;
+			border:1px solid #5D38DB;
+			background-color: #5D38DB;
+			color:white;
+			font-size: 15px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="topnav"></div>
+	<div id="settings">
+		<div class="tab">
+			<a class = "tablinks" onclick="openTab(event, 'tools')">Tools</a>
+			<a class = "tablinks" onclick="openTab(event, 'frameProp')">Frame Properties</a>
+		</div>
+
+		<div id="tools" class="tabcontent">
+			<form onsubmit="event.preventDefault();onFormSubmit()" >
+  				
+  					<div id="tools1">
+  					<label id="labelX" for="positionX">Position X</label>
+  					<input id="positionX" type="text" >
+  					</div>
+
+  					<div id="tools2">
+  					<label id="labelY" for="positionY">Position Y</label>	
+  					<input id="positionY" type="text" >
+  					</div>
+
+  					<div id="tools3">
+  					<label id="labelType" for="positionType">Position Type</label>
+  					<input id="positionType" type="text" placeholder=" Absolute | Relative | Fixed">
+  					</div>
+
+  					<div id="tools4">
+  					<label id="labelO">Object</label>
+  					<select id="objects">
+  						<option id="disabled">Object</option>
+  						<option >Tree</option>
+  						<option>House</option>
+  						<option>Grass</option>
+  					</select>
+  					</div>
+
+  					<div id="tools5">
+  					<p id="wish">Here you can add own css properties as you wish!</p>
+  					<label id="labelP">Box shadow</label>
+  					<input id="properties" type="text" >
+  					</div>
+
+  					<div id="tools6">
+  					<input id="addObject" type="submit" value="Add object to the frame">
+  					</div>
+
+  					
+  		</form>
+		</div>
+
+		<div id="frameProp" class="tabcontent">
+			
+		<form onsubmit="event.preventDefault();onSaveFrame()">
+			<div id="frameProp1">
+  				<label id="labelB" for="background1">Background</label>
+  				<input id="background1" type="text" >
+  			</div>
+
+  			<div id="frameProp2">
+  				<label id="labelR" for="border">Border radius</label>
+  				<input id="border" type="text" >
+  			</div>
+
+  			<div id="frameProp3">
+  				<label id="labelW" for="width">Width</label>
+  				<input id="width" type="text" >
+  			</div>
+
+  			<div id="frameProp4">
+  				<label id="labelH" for="height">Height</label>
+  				<input id="height" type="text" >
+  			</div>
+
+  			<div id="frameProp5">
+  				<p id="wish1">Here you can add own css properties as you wish!</p>
+  				<label id="labelP1">Text Color</label>
+  				<input id="properties1" type="text" >
+  			</div>
+
+  			<div id="frameProp6">
+  				<input id="saveFrame" type="submit" value="Save Frame settings">
+  			</div>
+  		</form>
+
+  			
+  			
+  			
+			
+		</div>
+
+	</div>
+
+	<div id="frame">
+		<div id="background">
+			<p id="text">THIS IS FRAME</p>
+		</div>
+		
+	</div>
+
+	<script >
+		
+		function onSaveFrame(){
+			var formData1 = readFormData1();
+			insertNewRecord1(formData1);
+		}
+		
+		function onFormSubmit(){
+			var formData = readFormData();
+			insertNewRecord(formData);
+		}
+
+		function readFormData(){
+			var formData={};
+			formData["pX"] = document.getElementById("positionX").value;
+    		formData["pY"] = document.getElementById("positionY").value;
+    		formData["pT"] = document.getElementById("positionType").value;
+    		formData["objects"] = document.getElementById("objects").value;
+    		formData["boxShadow"] = document.getElementById("properties").value;
+
+    		return formData;
+
+    	}
+
+    	function readFormData1(){
+    		var formData1={};
+    		formData1["bk"]  = document.getElementById("background1").value;
+    		formData1["br"]  = document.getElementById("border").value;
+    		formData1["width"]  = document.getElementById("width").value;
+    		formData1["height"]  = document.getElementById("height").value;
+    		formData1["properties1"] = document.getElementById("properties1").value;
+    		return formData1;
+    		
+    	}
+
+    	function insertNewRecord1(data1){
+    		var background = document.getElementById("background");
+    		var text = document.getElementById("text");
+    		background.style.backgroundColor=data1.bk;
+    		background.style.borderRadius=data1.br;
+    		background.style.width=data1.width;
+    		background.style.height=data1.height;
+    		text.style.color = data1.properties1;
+
+
+
+    	}
+
+
+
+
+    	function insertNewRecord(data){
+    		var background = document.getElementById("background");
+
+    		
+    		if(data.objects=="Tree"){
+    			var img = document.createElement("IMG");
+    			img.src="tree.jpg";
+    			if(data.pT=="Relative"){
+    				img.style.position =  "relative";
+    				img.style.top=data.pY;
+    				img.style.left=data.pX;
+    				img.style.boxShadow=data.boxShadow;
+    				img.style.zindex="9999";
+    			}
+    			if(data.pT=="Absolute"){
+    				img.style.position =  "absolute";
+    				img.style.top=data.pY;
+    				img.style.left=data.pX;
+    				img.style.boxShadow=data.boxShadow;
+    				img.style.zindex="9999";
+    			}
+    			if(data.pT=="Fixed"){
+    				img.style.position =  "fixed";
+    				img.style.top=data.pY;
+    				img.style.left=data.pX;
+    				img.style.boxShadow=data.boxShadow;
+    				img.style.zindex="9999";
+    			}
+
+    				background.appendChild(img);
+			}
+    		
+
+    		if(data.objects=="House"){
+    			var img = document.createElement("IMG");
+    			img.src="images.png";
+    			if(data.pT=="Relative"){
+    				img.style.position =  "relative";
+    				img.style.top=data.pY;
+    				img.style.left=data.pX;
+    				img.style.boxShadow=data.boxShadow;
+    				img.style.zindex="9999";
+    			}
+    			if(data.pT=="Absolute"){
+    				img.style.position =  "absolute";
+    				img.style.top=data.pY;
+    				img.style.left=data.pX;
+    				img.style.boxShadow=data.boxShadow;
+    				img.style.zindex="9999";
+    			}
+    			if(data.pT=="Fixed"){
+    				img.style.position =  "fixed";
+    				img.style.top=data.pY;
+    				img.style.left=data.pX;
+    				img.style.boxShadow=data.boxShadow;
+    				img.style.zindex="9999";
+    			}
+
+				background.appendChild(img);
+
+    		}
+    		
+
+
+
+    		if(data.objects=="Grass"){
+    			var img = document.createElement("IMG");
+    			img.src="grass.jpg";
+    			if(data.pT=="Relative"){
+    				img.style.position =  "relative";
+    				img.style.top=data.pY;
+    				img.style.left=data.pX;
+    				img.style.boxShadow=data.boxShadow;
+    				img.style.zindex="9999";
+    			}
+    			if(data.pT=="Absolute"){
+    				img.style.position =  "absolute";
+    				img.style.top=data.pY;
+    				img.style.left=data.pX;
+    				img.style.boxShadow=data.boxShadow;
+    				img.style.zindex="9999";
+    			}
+    			if(data.pT=="Fixed"){
+    				img.style.position =  "fixed";
+    				img.style.top=data.pY;
+    				img.style.left=data.pX;
+    				img.style.boxShadow=data.boxShadow;
+    				img.style.zindex="9999";
+    			}
+
+
+				background.appendChild(img);
+
+    		}
+    		
+    	}
+
+
+
+
+
+		function openTab(evt,tabName){
+			var i, tabcontent, tablinks;
+  			tabcontent = document.getElementsByClassName("tabcontent");
+  			for (i = 0; i < tabcontent.length; i++) {
+    			tabcontent[i].style.display = "none";
+  			}
+  			
+  			tablinks = document.getElementsByClassName("tablinks");
+  			for (i = 0; i < tablinks.length; i++) {
+    			tablinks[i].className = tablinks[i].className.replace(" active", "");
+  			}
+  			document.getElementById(tabName).style.display = "block";
+  			evt.currentTarget.className += " active";	
+		
+		}
+
+		
+	</script>
+</body>
+</html>

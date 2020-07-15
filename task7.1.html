@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    
+    <style>
+      #disabled{
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <select id="countries">
+      <option >Select country</option>
+      
+    </select>
+    <select id="cities">
+      <option>Select city</option>
+    </select>
+
+
+
+    <script defer>
+      
+      let countries = ["Kazakhstan","Russia","England","France"];
+      let cities_by_country = ["Almaty","Astana","Karagandy","Moscow","Saint-Petersburg","Kazan","London","Manchester","Liverpool","Paris","Lyon","Marseille"];
+
+
+      var i;
+      var len = countries.length;
+      var lent=cities_by_country.length;
+      var x;
+      var y;
+      
+      for (i=0;i<len;i++){
+        var opt = document.createElement("OPTION");
+        var o = document.createTextNode(countries[i]);
+        opt.appendChild(o);
+        document.getElementById('countries').appendChild(opt);
+      }
+      
+
+
+      for(x=0;x<lent;x++){        
+        var opt = document.createElement("OPTION");
+        var o = document.createTextNode(cities_by_country[x]);
+        opt.appendChild(o);
+        document.getElementById('cities').appendChild(opt);
+      }      
+
+
+      
+
+        
+      
+       
+
+
+      
+    </script>
+  </body>
+
+</html>
