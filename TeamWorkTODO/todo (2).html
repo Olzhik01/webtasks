@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>To Do</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <p>My ToDo List</p>
+    </div>
+    <div id="card_container">
+        <div class="card">
+            <p class="card_title">Do</p>
+            <div class="tasksButton">
+              <button id="get-tasks">Get Tasks</button><button id="create-tasks">Create Tasks</button>
+            </div>
+            <ul id="items"></ul>
+            <ul id="itemsGet"></ul>
+            <div id="new">
+                <input type="text" id="myInput" placeholder="Title..."><img src="img/icons8-plus.svg" onclick="newElement()" class="addBtn">
+            </div>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script>
+    <script src="serverProject.js"></script>
+    <script src="ulProject.js"></script>
+</body>
+
+</html>
