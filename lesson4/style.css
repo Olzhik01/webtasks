@@ -1,0 +1,33 @@
+body{
+	margin: 0;
+	font-family: Roboto;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+.navbar{
+	height: 42px;
+	width: 100%;
+	background-color: #4A76A8;
+}
+
+.navbar-logo a{
+	color: white;
+	font-size: 30px;
+	margin-top: 2px;
+	margin-left: 270px;
+	float: left;
+
+}
+.logo{
+	border: 1px solid red;
+}
+
+.navbar-search{
+	border: 1px solid orange;	
+}
+
+

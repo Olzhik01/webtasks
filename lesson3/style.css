@@ -1,0 +1,310 @@
+body{
+	margin: 0;
+	font-family: Roboto;
+
+
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+
+.avatarka{
+	width: 300px;
+	height: 300px;
+	margin-bottom: -5px;
+}
+
+.navbar{
+	height: 50px;
+	background-color: #09187F;
+}
+.facebook{
+	
+	margin-left: 25px;
+	padding-top: 10px;
+	font-size: 25px;
+
+	font-weight: bold;
+	width: 200px;
+	float: left;
+}
+
+.facebook a{
+	color: white;
+}
+
+.rightLinks{
+	float: right;
+	
+	margin-right: 50px;
+	margin-top: 17px;
+
+}
+
+.rightLinks a{
+	color: lightgray;
+	margin-right: 30px;
+}
+
+.rightLinks a:hover{
+	color: white;
+}
+
+.content{
+	
+	min-height: 700px;
+	margin: 20px;
+}
+
+.mainContent{
+	width: 100%;
+	display: flex;
+	min-height: 700px;
+
+}
+
+.leftbar{
+	width: 21%;
+	
+}
+
+.rightbar{
+	width: 79%;
+
+}
+
+
+
+table{
+	border-collapse: collapse;
+}
+
+td{
+	padding: 10px;
+	border: 1px solid lightgray;
+}
+
+.leftbarTable a{
+	font-weight: bold;
+	
+}
+.news1{
+	
+	
+	background-color: #E8ECEF;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	border: 1px solid #E8ECEF;
+	border-radius: 5px;
+
+}
+
+.text{
+	
+	padding: 40px;
+}
+
+button{
+	width: 50px;
+	color: white;
+	background-color: #32B648;
+	border: 1px solid #32B648;
+
+}
+
+
+/* elements of photo.html */
+
+
+.photoCard{
+	width: 33%;
+	margin-left: 10px;
+	
+	
+		
+}
+
+
+
+.image{
+	width: 100%;
+	height: 200px;
+	border-radius: 5px 5px 0 0;
+	margin-bottom: -5px;
+}
+
+.photoCap{
+	border: 1px solid lightgray;
+	background-color: #F7F7F7;
+
+}
+.photoText{
+	margin-left: 20px;
+
+}
+
+.mainPhotos{
+	display: flex;
+}
+
+.row{
+	display: block;
+	margin-bottom: 10px;
+}
+
+/* settings,My profile elements*/
+
+
+
+.edit{
+	
+	display: flex;
+	justify-content: center;
+
+
+}
+.editTable td{
+	border: 1px solid white;
+}
+
+
+
+select{
+	width: 260px;
+	height: 30px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+}
+
+input[type='text']{
+	width: 260px;
+	height: 30px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+}
+input[type='password']{
+	width: 260px;
+	height: 30px;
+	border: 1px solid lightgray;
+	border-radius: 5px;	
+}
+input[type='date']{
+	width: 260px;
+	height: 30px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+}
+
+.saveData{
+	width: 150px;
+	border: 1px solid #007BFC;
+	background-color: #007BFC;
+	height: 35px;
+	float: right;
+}
+
+
+/* messages.html elements*/
+
+.message{
+	margin-bottom: 20px;
+	width: 100%;
+	
+}
+
+.messageTable td{
+	padding: 5px;
+	border: 1px solid white;
+
+}
+.messageTo{
+	width: 700px;
+	float: right;
+	height: 30px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+}
+
+.sendMessage{
+	width: 150px;
+	background-color: #32B648;
+	border: 1px solid #32B648;
+	height: 35px;
+	float: right;
+	border-radius: 5px;
+}
+
+textarea{
+	border: 1px solid lightgray;
+}
+
+.messagesFrom{
+	min-height: 450px;
+	
+	width: 100%;
+}
+
+.messageContent{
+	
+	margin-left: 10px;
+}
+
+.messages{
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	
+
+}
+
+.former{
+	float: left;
+}
+
+.sentTime{
+	float: right;
+
+}
+
+.clear{
+	color: red;
+	font-weight: bold;
+}
+
+/*Groups.html elements*/
+
+
+
+.invGroups{
+	display: flex;
+
+}
+
+.group{
+	width: 50%;
+	margin-right: 30px;
+}
+
+.enterButton{
+	width: 60px;
+	border: 1px solid #007BFC;
+	background-color: #007BFC;
+	height: 30px;
+	margin-right: 10px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.leaveButton{
+	width: 60px;
+	border: 1px solid red;
+	background-color: red;
+	height: 30px;
+	margin-right: 10px;
+	border-radius: 5px;
+}
+.groupContent{
+	margin-left: 30px;
+	
+}
+
